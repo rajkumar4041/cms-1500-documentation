@@ -6,6 +6,15 @@ import { Hero } from './components/Hero'
 import { Demo } from './components/Demo'
 import { Footer } from './components/Footer'
 import { LiveClaimDemo } from './components/LiveClaimDemo'
+import { Installation } from './sections/Installation'
+import { QuickStart } from './sections/QuickStart'
+import { FormComponentSection } from './sections/FormComponentSection'
+import { HookSection } from './sections/HookSection'
+import { HeadlessSection } from './sections/HeadlessSection'
+import { FhirSection } from './sections/FhirSection'
+import { DataReferenceSection } from './sections/DataReferenceSection'
+import { ConstantsSection } from './sections/ConstantsSection'
+import { HipaaSection } from './sections/HipaaSection'
 
 const FLAGSHIP_SNIPPET = `import { useCMS1500 } from 'cms1500-react';
 
@@ -44,6 +53,15 @@ export default function App() {
               code={FLAGSHIP_SNIPPET}
               lang="tsx"
             />
+            <Installation />
+            <QuickStart />
+            <FormComponentSection />
+            <HookSection />
+            <HeadlessSection />
+            <FhirSection />
+            <DataReferenceSection />
+            <ConstantsSection />
+            <HipaaSection />
             <Footer />
           </div>
         </main>
