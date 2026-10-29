@@ -17,3 +17,8 @@
 .api-table tr:last-child td{border-bottom:none}
 .note{display:flex;gap:10px;background:var(--accent-soft);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:9px;padding:13px 15px;margin:18px 0;font-size:14px;color:var(--text-dim)}
 .note b{color:var(--text)}
+
+/* Declare the active color scheme so the browser themes native controls and
+   does NOT force-darken the page (Chrome Auto Dark Mode / dark-mode extensions). */
+:root{color-scheme:dark}
+[data-theme=light]{color-scheme:light}
