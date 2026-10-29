@@ -5,6 +5,24 @@ import { Sidebar } from './components/Sidebar'
 import { Hero } from './components/Hero'
 import { Demo } from './components/Demo'
 import { Footer } from './components/Footer'
+import { LiveClaimDemo } from './components/LiveClaimDemo'
+
+const FLAGSHIP_SNIPPET = `import { useCMS1500 } from 'cms1500-react';
+
+function ClaimPreview({ claimData }) {
+  const { pdfUrl, loading, generatePdf, handlePrint, handleDownload, iframeRef } =
+    useCMS1500();
+
+  useEffect(() => { generatePdf(claimData); }, [claimData]);
+
+  return (
+    <>
+      <button onClick={handlePrint} disabled={!pdfUrl}>Print</button>
+      <button onClick={() => handleDownload('claim.pdf')}>Download</button>
+      <iframe ref={iframeRef} src={pdfUrl ?? undefined} />
+    </>
+  );
+}`
 
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -18,10 +36,12 @@ export default function App() {
           <div className="container">
             <Hero />
             <Demo
-              id="quick-start"
-              title="Quick Start"
-              tagline="Render a filled CMS-1500 with a single component."
-              code={`import { CMS1500Form } from 'cms1500-react';\n\n<CMS1500Form data={claimData} width="100%" />`}
+              title="Try it live"
+              tagline="Edit the claim fields and watch a real CMS-1500 PDF fill in — generated entirely in your browser."
+              flagship
+              liveLabel="Live editor"
+              live={<LiveClaimDemo />}
+              code={FLAGSHIP_SNIPPET}
               lang="tsx"
             />
             <Footer />
