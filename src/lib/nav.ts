@@ -41,6 +41,7 @@ export const NAV: NavGroup[] = [
     label: 'Data Reference',
     links: [
       { id: 'data-reference', text: 'CMS1500Data' },
+      { id: 'json-playground', text: 'JSON playground' },
       { id: 'constants', text: 'Field constants' },
     ],
   },
