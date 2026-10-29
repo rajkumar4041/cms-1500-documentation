@@ -29,6 +29,14 @@ export function DataReferenceSection() {
           <code>"CODE - description"</code> strings.
         </span>
       </Note>
+      <Note>
+        <span>
+          <b>New in 1.4:</b> <code>serviceFacilityAddress</code> (Box 32) and{' '}
+          <code>billingProviderAddress</code> (Box 33) now accept a{' '}
+          <code>CMS1500Address</code> object as well as a string — the object fills the street line
+          and the city/state/zip line separately.
+        </span>
+      </Note>
     </section>
   )
 }

@@ -14,7 +14,7 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
     <aside className={`sidebar${open ? ' open' : ''}`}>
       <a className="brand" href="#overview" onClick={(e) => go(e, 'overview')}>
         <img className="logo" src="/favicon.svg" alt="" />
-        cms1500-react <span className="ver">v1.3.1</span>
+        cms1500-react <span className="ver">v1.4.1</span>
       </a>
       <p className="sidebar-sub">Fill, render & print CMS-1500 claims as real PDFs.</p>
 

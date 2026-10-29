@@ -30,6 +30,10 @@ export const NAV: NavGroup[] = [
     links: [{ id: 'headless', text: 'fillCMS1500Pdf()' }],
   },
   {
+    label: 'Validation',
+    links: [{ id: 'validation', text: 'validateCMS1500()' }],
+  },
+  {
     label: 'FHIR',
     links: [{ id: 'fhir', text: 'mapFHIRToCMS1500()' }],
   },

@@ -11,6 +11,7 @@ import { QuickStart } from './sections/QuickStart'
 import { FormComponentSection } from './sections/FormComponentSection'
 import { HookSection } from './sections/HookSection'
 import { HeadlessSection } from './sections/HeadlessSection'
+import { ValidationSection } from './sections/ValidationSection'
 import { FhirSection } from './sections/FhirSection'
 import { DataReferenceSection } from './sections/DataReferenceSection'
 import { ConstantsSection } from './sections/ConstantsSection'
@@ -58,6 +59,7 @@ export default function App() {
             <FormComponentSection />
             <HookSection />
             <HeadlessSection />
+            <ValidationSection />
             <FhirSection />
             <DataReferenceSection />
             <ConstantsSection />

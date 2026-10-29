@@ -24,7 +24,7 @@ export function Hero() {
 
   return (
     <header className="hero" id="overview">
-      <span className="eyebrow">⚕ React · PDF · FHIR R4 · HIPAA-conscious</span>
+      <span className="eyebrow">⚕ React · PDF · FHIR R4 · Validation · HIPAA-conscious</span>
       <h1>
         CMS-1500 claim forms,
         <br />

@@ -45,8 +45,8 @@ export const TEMPLATE_HELPERS = `import {
 } from 'cms1500-react';
 
 getEmbeddedTemplate(); // Uint8Array of the blank CMS-1500 PDF (bundled)
-TEMPLATE_ASSET_PATH;   // path to the asset shipped in the package
-TEMPLATE_FILENAME;     // "form-cms-1500.pdf"`
+TEMPLATE_ASSET_PATH;   // "cms1500-react/assets/cms-1500-template.pdf"
+TEMPLATE_FILENAME;     // "cms-1500-template.pdf"`
 
 export const FHIR_USAGE = `import { mapFHIRToCMS1500 } from 'cms1500-react';
 import type { FHIRClaimBundle } from 'cms1500-react';
@@ -78,6 +78,23 @@ const bundle: FHIRClaimBundle = {
 };
 
 const formData = mapFHIRToCMS1500(bundle);`
+
+export const VALIDATE_USAGE = `import { validateCMS1500 } from 'cms1500-react';
+
+const { valid, errors, warnings } = validateCMS1500(claimData);
+
+if (!valid) {
+  // errors block submission — invalid NPI/date, a diagnosis pointer
+  // referencing a Box 21 code that isn't there, missing name/diagnosis/line…
+  console.error(errors);
+}
+
+// warnings never block — overflow past the 12-diagnosis / 6-line caps,
+// missing recommended fields, etc.
+console.warn(warnings);
+
+// Each issue: { field, code, message, severity }
+// e.g. { field: 'billingProviderNPI', code: 'NPI_INVALID', severity: 'error' }`
 
 export const MINIMAL_EXAMPLE = `{
   "patientName": "JOHN DOE",
