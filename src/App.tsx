@@ -1,17 +1,17 @@
+import { useState } from 'react'
 import { ToastProvider } from './components/ToastProvider'
 import { TopBar } from './components/TopBar'
+import { Sidebar } from './components/Sidebar'
 
 export default function App() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <ToastProvider>
       <div className="layout">
-        <aside className="sidebar">
-          <div className="brand">
-            cms1500-react <span className="ver">v1.3.1</span>
-          </div>
-        </aside>
+        <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
         <main className="content">
-          <TopBar />
+          <TopBar onMenuToggle={() => setMenuOpen((o) => !o)} />
           <div className="container">
             <h1>cms1500-react</h1>
           </div>
