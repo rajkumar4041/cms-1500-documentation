@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/test/setup.ts"],"version":"5.9.3"}
+{"root":["./src/App.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/ToastProvider.tsx","./src/components/TopBar.tsx","./src/lib/theme.ts","./src/test/setup.ts"],"version":"5.9.3"}
