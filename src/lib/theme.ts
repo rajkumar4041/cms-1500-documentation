@@ -13,7 +13,13 @@ export function getStoredTheme(): Theme {
 }
 
 export function applyTheme(theme: Theme): void {
-  document.documentElement.dataset.theme = theme
+  const root = document.documentElement
+  root.dataset.theme = theme
+  // Set color-scheme imperatively on the root so the browser re-applies the
+  // active scheme (native controls, scrollbars, auto-dark decision) live on
+  // every toggle — without needing a page reload. The static <meta> keeps its
+  // "light dark" value so browser auto-dark stays off for both themes.
+  root.style.colorScheme = theme
   try {
     localStorage.setItem(KEY, theme)
   } catch {
