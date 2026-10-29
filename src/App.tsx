@@ -6,6 +6,7 @@ import { Hero } from './components/Hero'
 import { Demo } from './components/Demo'
 import { Footer } from './components/Footer'
 import { LiveClaimDemo } from './components/LiveClaimDemo'
+import { JsonPlaygroundDemo } from './components/JsonPlaygroundDemo'
 import { Installation } from './sections/Installation'
 import { QuickStart } from './sections/QuickStart'
 import { FormComponentSection } from './sections/FormComponentSection'
@@ -54,6 +55,7 @@ export default function App() {
               code={FLAGSHIP_SNIPPET}
               lang="tsx"
             />
+            <JsonPlaygroundDemo />
             <Installation />
             <QuickStart />
             <FormComponentSection />

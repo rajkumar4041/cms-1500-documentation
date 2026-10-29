@@ -1,6 +1,5 @@
 import { Demo } from '../components/Demo'
 import { CatHeader, Note } from '../components/ui'
-import { JsonPlaygroundDemo } from '../components/JsonPlaygroundDemo'
 import { FULL_DATA_REFERENCE, MINIMAL_EXAMPLE } from '../lib/snippets'
 
 export function DataReferenceSection() {
@@ -23,7 +22,6 @@ export function DataReferenceSection() {
         code={FULL_DATA_REFERENCE}
         lang="json"
       />
-      <JsonPlaygroundDemo />
       <Note>
         <span>
           Diagnosis codes accept either <code>diagnisisCodeData</code> (array of{' '}
